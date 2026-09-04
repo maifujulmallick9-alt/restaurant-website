@@ -87,3 +87,20 @@ h1 { font-size: clamp(58px, 8vw, 108px); margin-top:24px; max-width:650px; } h1 
 @media (max-width: 1000px) { .dish-grid { grid-template-columns:repeat(3, 1fr); } .location-grid { gap:50px; } }
 @media (max-width: 800px) { .order-summary { margin-top:28px; justify-content:space-between; } .filter-bar { display:block; margin-top:35px; } .filter-group + .filter-group { margin-top:12px; } .dish-grid { grid-template-columns:repeat(2, 1fr); gap:13px; } .dish-image-wrap { height:190px; } .dish-card-bottom { display:block; min-height:185px; } .dish-buy { flex-direction:row; align-items:center; margin-top:14px; } .location-grid { grid-template-columns:1fr; gap:45px; } .map-card { order:-1; } }
 @media (max-width: 480px) { .dish-grid { grid-template-columns:1fr; } .dish-image-wrap { height:240px; } .dish-card-bottom { min-height:0; } .filter { padding:7px 8px; font-size:10px; } .filter-label { width:100%; margin-bottom:2px; } .filter-group { gap:5px; } .order-summary { font-size:11px; } .cart-drawer { padding:26px 20px; } }
+
+/* Reliable cart and checkout controls */
+.cart-count-pill { display:inline-flex; align-items:center; gap:6px; color:#e6d9ce; }
+.card-quantity { display:flex; align-items:center; gap:8px; border:1px solid rgba(216,165,75,.75); color:var(--gold); padding:6px 7px; }
+.card-quantity button { display:grid; place-items:center; color:var(--gold); cursor:pointer; width:18px; height:18px; }
+.card-quantity button:hover { background:var(--gold); color:var(--espresso); }
+.card-quantity b { font-size:12px; min-width:14px; text-align:center; }
+.checkout-form { display:flex; flex-direction:column; gap:12px; padding:4px 0 18px; }
+.checkout-form label { display:flex; flex-direction:column; gap:6px; font-size:11px; font-weight:700; color:var(--ink); }
+.checkout-form input, .checkout-form textarea { width:100%; border:1px solid var(--line); background:#fffdf9; color:var(--ink); padding:11px 12px; font:inherit; font-size:12px; outline:none; resize:vertical; }
+.checkout-form input:focus, .checkout-form textarea:focus { border-color:var(--gold); box-shadow:0 0 0 3px rgba(216,165,75,.15); }
+.location-button { display:inline-flex; align-items:center; justify-content:center; gap:8px; border:1px solid var(--espresso); color:var(--espresso); padding:10px 12px; font-size:11px; font-weight:700; cursor:pointer; transition:all .18s ease; }
+.location-button:hover { background:var(--espresso); color:var(--cream); }
+.location-status { color:#8a5e3c; font-size:11px; line-height:1.45; margin:0; }
+@media (max-width: 1000px) { .dish-grid { grid-template-columns:repeat(3, 1fr); } }
+@media (max-width: 800px) { .dish-grid { grid-template-columns:repeat(2, 1fr); } }
+@media (max-width: 480px) { .dish-grid { grid-template-columns:1fr; } .order-summary { align-items:flex-end; } .cart-count-pill { font-size:10px; } }
