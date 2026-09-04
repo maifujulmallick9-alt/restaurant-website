@@ -122,3 +122,13 @@ h1 { font-size: clamp(58px, 8vw, 108px); margin-top:24px; max-width:650px; } h1 
 /* Real-restaurant menu course groupings */
 .course-group { margin-bottom: 28px; }
 .course-label { color: var(--gold); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; font-weight: 700; margin: 0 0 12px; }
+
+/* Image-free menu cards and restaurant navigation */
+.dish-placeholder { min-height: 118px; background: linear-gradient(135deg, #3b2a20, #1f1713); display:flex; align-items:center; justify-content:center; position:relative; }
+.dish-initial { font-family:'Playfair Display'; font-size:58px; color:rgba(224,172,74,.25); font-style:italic; }
+.dish-placeholder .diet-badge { display:inline-flex; align-items:center; gap:5px; }
+.dish-placeholder .diet-badge.nonveg { border-color:#e48667; color:#f3ad92; }
+.filter-bar-sticky { position:sticky; top:0; z-index:10; background:rgba(37,27,22,.96); backdrop-filter:blur(14px); padding-top:15px; padding-bottom:15px; }
+.menu-dock { display:inline-flex; align-items:center; gap:7px; border:1px solid rgba(224,172,74,.65); color:var(--gold); background:rgba(37,27,22,.7); padding:10px 13px; text-transform:uppercase; letter-spacing:.12em; font-size:10px; }
+.menu-dock:hover { background:var(--gold); color:var(--espresso); }
+@media (max-width:800px) { .filter-bar-sticky { overflow-x:auto; align-items:flex-start; } .filter-bar-sticky .filter-group { flex-wrap:nowrap; min-width:max-content; } .menu-dock span { display:none; } }
