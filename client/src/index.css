@@ -118,3 +118,7 @@ h1 { font-size: clamp(58px, 8vw, 108px); margin-top:24px; max-width:650px; } h1 
 .floating-cart strong { border-left:1px solid rgba(37,27,22,.3); padding-left:12px; }
 @keyframes floatIn { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
 @media (max-width:800px) { .cuisine-sections { gap:50px; } .cuisine-section-heading { display:block; } .cuisine-section-heading > span { display:block; margin-top:8px; } .floating-cart { right:14px; bottom:14px; padding:13px 14px; } }
+
+/* Real-restaurant menu course groupings */
+.course-group { margin-bottom: 28px; }
+.course-label { color: var(--gold); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; font-weight: 700; margin: 0 0 12px; }
