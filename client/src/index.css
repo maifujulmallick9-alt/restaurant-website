@@ -104,3 +104,17 @@ h1 { font-size: clamp(58px, 8vw, 108px); margin-top:24px; max-width:650px; } h1 
 @media (max-width: 1000px) { .dish-grid { grid-template-columns:repeat(3, 1fr); } }
 @media (max-width: 800px) { .dish-grid { grid-template-columns:repeat(2, 1fr); } }
 @media (max-width: 480px) { .dish-grid { grid-template-columns:1fr; } .order-summary { align-items:flex-end; } .cart-count-pill { font-size:10px; } }
+
+/* Always-visible cuisine menu */
+.cuisine-sections { display:flex; flex-direction:column; gap:70px; }
+.cuisine-section { scroll-margin-top:110px; }
+.cuisine-section-heading { display:flex; align-items:flex-end; justify-content:space-between; gap:20px; margin-bottom:22px; padding-bottom:14px; border-bottom:1px solid rgba(255,255,255,.18); }
+.cuisine-section-heading > div { display:flex; align-items:center; gap:12px; }
+.cuisine-section-heading h3 { color:#f4eadf; font-family:'Playfair Display'; font-weight:500; font-size:31px; margin:0; }
+.cuisine-section-heading > span { color:#a89789; font-size:11px; }
+.cuisine-number { color:var(--gold); font-family:'Playfair Display'; font-style:italic; font-size:19px; }
+.floating-cart { position:fixed; z-index:20; right:24px; bottom:24px; display:flex; align-items:center; gap:12px; padding:15px 18px; color:var(--espresso); background:var(--gold); box-shadow:0 14px 35px rgba(0,0,0,.25); cursor:pointer; font-size:12px; font-weight:700; animation:floatIn .35s var(--ease-out) both; }
+.floating-cart:hover { background:#efc162; transform:translateY(-3px); }
+.floating-cart strong { border-left:1px solid rgba(37,27,22,.3); padding-left:12px; }
+@keyframes floatIn { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+@media (max-width:800px) { .cuisine-sections { gap:50px; } .cuisine-section-heading { display:block; } .cuisine-section-heading > span { display:block; margin-top:8px; } .floating-cart { right:14px; bottom:14px; padding:13px 14px; } }
