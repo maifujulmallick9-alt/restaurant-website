@@ -208,3 +208,63 @@ h1 { font-size: clamp(58px, 8vw, 108px); margin-top:24px; max-width:650px; } h1 
 .optional { color:#a68d73; font-size:9px; text-transform:lowercase; letter-spacing:0; }
 .booking-footnote { color:#8b7865; font-size:11px; }
 @media (max-width:800px) { .menu-search { flex-basis:100%; } .booking-grid { grid-template-columns:1fr; gap:38px; } .booking-two-col { grid-template-columns:1fr; } .booking-form { padding:22px; } }
+
+/* Ocean luxury redesign */
+:root { --espresso:#071c2d; --ink:#12384e; --cream:#dceff0; --paper:#f3faf9; --gold:#d8b86b; --pistachio:#9bc9c5; --muted:#547486; --line:rgba(18,56,78,.18); }
+body { background:var(--paper); color:var(--ink); }
+.topline { background:#041321; color:#c5d9d9; }
+.topline-right { color:#88b0b5; }
+.nav-wrap { border-bottom-color:rgba(180,230,230,.2); }
+.nav-links { color:#d9eeee; }
+.nav-links button:hover { color:#9ed9d5; }
+.nav-cta { color:#d8b86b; border-color:rgba(216,184,107,.72); }
+.nav-cta:hover { background:#d8b86b; color:#071c2d; }
+.hero { background:#071c2d; }
+.hero-overlay { background:linear-gradient(90deg,rgba(4,19,33,.96) 0%,rgba(4,25,42,.83) 34%,rgba(5,39,57,.23) 72%,rgba(4,19,33,.38) 100%),linear-gradient(0deg,rgba(4,22,36,.62),transparent 46%); }
+.hero-image { filter:saturate(.82) hue-rotate(145deg) brightness(.82); }
+.hero-copy { color:#c9dfdf; }
+.eyebrow.light { color:#b8d3d4; }
+.button-gold { color:#071c2d; background:#d8b86b; }
+.button-gold:hover { background:#f0d58e; }
+.button-outline { color:#d8b86b; border-color:rgba(216,184,107,.7); }
+.text-link.light { border-color:rgba(216,184,107,.72); }
+.hero-note { color:#bdd7d7; }
+.intro { background:linear-gradient(135deg,#e4f3f2,#cfe8e8); }
+.quote-section { background:#a6cecc; }
+.quote-section blockquote em { color:#2a6676; }
+.menu-section, .reviews-section, .booking-section { background:#071c2d; }
+.menu-section:before { opacity:.12; background-image:radial-gradient(#75bbc0 1px,transparent 1px); }
+.filter-bar { border-color:rgba(160,220,220,.2); }
+.filter-label, .filter { color:#a7c8ca; }
+.filter { border-color:rgba(160,220,220,.2); }
+.filter:hover, .filter.active { color:#071c2d; background:#9ed9d5; border-color:#9ed9d5; }
+.dish-card { background:linear-gradient(145deg,#123a4b,#09283b); border-color:rgba(155,211,211,.16); }
+.dish-card:hover { border-color:rgba(216,184,107,.7); box-shadow:0 20px 40px rgba(0,15,30,.35); }
+.no-dish-image { background:linear-gradient(145deg,#123a4b,#09283b); }
+.no-dish-image .dish-card-top { border-bottom-color:rgba(160,220,220,.12); }
+.no-dish-image .dish-index { color:#8fb6ba; }
+.dish-card h3 { color:#e8f4f2; }
+.dish-card p { color:#a4c3c5; }
+.cuisine-name, .dish-buy strong { color:#d8b86b; }
+.add-button { color:#d8b86b; border-color:rgba(216,184,107,.68); }
+.add-button:hover { background:#d8b86b; color:#071c2d; }
+.diet-badge.veg { background:#b8ded0; color:#113c3a; }
+.diet-badge.nonveg { background:#e6ad8c; color:#4a241b; }
+.spicy-badge { color:#f2d690; border-color:rgba(242,214,144,.58); }
+.location-section { background:#e5f2ef; }
+.map-card { background:linear-gradient(135deg,#b9d8d3,#8ebdc2) !important; }
+.gallery-section { background:#e2f1f0; }
+.gallery-grid figure::after { background:linear-gradient(180deg,transparent 45%,rgba(3,25,39,.8)); }
+.reviews-section { background:linear-gradient(145deg,#09283b,#061a2a); }
+.review-card { background:rgba(104,185,191,.09); border-color:rgba(145,213,213,.24); }
+.review-card p { color:#d1e6e4; }
+.review-tags span { border-color:rgba(216,184,107,.38); color:#d8b86b; }
+.review-form, .booking-form { background:linear-gradient(145deg,#e5f3f1,#cde7e7); }
+.review-form input, .review-form textarea, .booking-form input, .booking-form select, .booking-form textarea { background:#f6fcfa; border-color:#b6d2d2; }
+.footer { background:#041321; }
+.footer-bottom { border-top-color:rgba(160,220,220,.17); }
+.menu-search { border-color:rgba(158,217,213,.4); background:rgba(96,181,186,.09); }
+.menu-search input { color:#e4f5f2; }
+.booking-note small, .booking-grid > div > p { color:#a9c5c7; }
+.rating-picker button.selected, .review-score span, .review-stars { color:#d8b86b; }
+@media (max-width:800px) { .nav-links { background:#071c2d; } }
