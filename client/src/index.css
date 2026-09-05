@@ -283,3 +283,29 @@ body { background:var(--paper); color:var(--ink); }
 @keyframes waterReflection { from { opacity:.2; transform:translate3d(-2%,0,0) skewY(-2deg) scaleX(1); } to { opacity:.4; transform:translate3d(3%,2%,0) skewY(-2deg) scaleX(1.08); } }
 @keyframes driftWave { from { transform:rotate(-16deg) translate3d(0,0,0); } to { transform:rotate(-10deg) translate3d(-70px,24px,0); } }
 @media (prefers-reduced-motion: reduce) { .hero::before, .hero::after, .menu-section::after, .booking-section::after, .reviews-section::after { animation:none; } }
+
+/* Reference-matched ocean layout: fixed rail + cinematic hero + bottom cards */
+.site-shell { margin-left:238px; }
+.ocean-sidebar { position:fixed; z-index:30; inset:0 auto 0 0; width:238px; padding:45px 38px 34px; display:flex; flex-direction:column; background:#061a2a; border-right:1px solid rgba(147,205,207,.22); color:#dcefed; overflow:hidden; }
+.ocean-sidebar::before { content:""; position:absolute; inset:-20% -45% -10% -40%; pointer-events:none; opacity:.2; background:repeating-radial-gradient(ellipse at 20% 50%,transparent 0 30px,rgba(129,213,211,.5) 31px 32px,transparent 33px 60px); transform:rotate(-22deg); }
+.sidebar-brand, .sidebar-nav, .sidebar-whatsapp, .sidebar-shell-mark { position:relative; z-index:1; }
+.sidebar-brand { display:flex; flex-direction:column; align-items:flex-start; text-align:left; color:#f5f2e7; cursor:pointer; padding:0; }
+.sidebar-brand-main { font-family:'Playfair Display'; font-size:30px; letter-spacing:.12em; line-height:1; }
+.sidebar-brand-with { color:#c7a95e; font-family:'Playfair Display'; font-style:italic; font-size:14px; margin:8px 0 -5px 4px; }
+.sidebar-brand-name { color:#d8b86b; font-family:'Playfair Display'; font-style:italic; font-size:25px; margin-left:20px; }
+.sidebar-brand small { color:#89b9bc; font-size:8px; letter-spacing:.18em; margin-top:17px; }
+.sidebar-shell-mark { margin:38px 0 27px; width:28px; height:28px; border:1px solid rgba(216,184,107,.75); border-radius:50%; display:grid; place-items:center; color:#d8b86b; font-size:20px; }
+.sidebar-nav { display:flex; flex-direction:column; gap:20px; }
+.sidebar-nav button { color:#b5d0d0; text-align:left; text-transform:uppercase; letter-spacing:.13em; font-size:10px; padding:0; cursor:pointer; transition:color .2s ease, transform .2s ease; }
+.sidebar-nav button:first-child, .sidebar-nav button:hover { color:#d8b86b; transform:translateX(4px); }
+.sidebar-whatsapp { display:flex; align-items:center; gap:8px; margin-top:auto; color:#d8b86b; font-size:10px; border:1px solid rgba(216,184,107,.55); padding:11px 12px; }
+.hero-bottom-grid { position:absolute; left:32px; right:32px; bottom:28px; display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:12px; z-index:2; max-width:860px; }
+.hero-mini-card { min-height:104px; padding:16px 18px; text-align:left; color:#dff1ee; border:1px solid rgba(150,220,218,.23); background:rgba(7,40,55,.72); backdrop-filter:blur(11px); cursor:pointer; display:flex; flex-direction:column; align-items:flex-start; gap:5px; transition:transform .25s var(--ease-out), border-color .2s ease, background .2s ease; }
+.hero-mini-card:hover { transform:translateY(-5px); border-color:rgba(216,184,107,.7); background:rgba(16,66,80,.82); }
+.hero-mini-highlight { background:rgba(16,74,83,.72); }
+.mini-eyebrow { color:#70c6c4; text-transform:uppercase; letter-spacing:.15em; font-size:9px; }
+.hero-mini-card strong { font-family:'Playfair Display'; font-size:17px; font-weight:500; line-height:1.08; }
+.hero-mini-card small { margin-top:auto; color:#d8b86b; font-size:10px; }
+.hero-note { bottom:155px; }
+@media (min-width:801px) { .nav { justify-content:flex-end; } .nav .brand { display:none; } .nav-links { display:none; } .mobile-toggle { display:flex; } }
+@media (max-width:800px) { .site-shell { margin-left:0; } .ocean-sidebar { display:none; } .hero-bottom-grid { left:20px; right:20px; bottom:20px; grid-template-columns:1fr; gap:8px; } .hero-mini-card { min-height:70px; padding:12px 14px; } .hero-mini-card:nth-child(2), .hero-mini-card:nth-child(3) { display:none; } .hero-note { bottom:125px; right:20px; } }
