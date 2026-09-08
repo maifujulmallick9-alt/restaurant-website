@@ -203,7 +203,7 @@ function vitePluginStorageProxy(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy()];
+const plugins = [react(), tailwindcss(), jsxLocPlugin(), ...(process.env.VERCEL ? [] : [vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy()])];
 
 export default defineConfig({
   plugins,
@@ -217,7 +217,7 @@ export default defineConfig({
   envDir: path.resolve(import.meta.dirname),
   root: path.resolve(import.meta.dirname, "client"),
   build: {
-    outDir: path.resolve(import.meta.dirname, "dist/public"),
+    outDir: path.resolve(import.meta.dirname, "dist"),
     emptyOutDir: true,
   },
   server: {
